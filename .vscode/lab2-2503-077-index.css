@@ -1,0 +1,173 @@
+/* 全局初始化 盒子模型 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* 头部样式 */
+.header {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+/* 顶部导航 固定定位+浮动 */
+.top-nav {
+    /* 固定定位 */
+    position: fixed;
+    top: 15px;
+    right: 30px;
+}
+
+.top-nav ul li {
+    float: left;
+    margin: 0 15px;
+    cursor: pointer; /* cursor指针 */
+}
+
+.top-nav a {
+    color: #333;
+}
+
+.top-nav a:hover {
+    color: #ff6700;
+}
+
+/* 主体容器 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 左侧栏 相对定位 */
+.left-bar {
+    width: 220px;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-right: 10px;
+    float: left;
+    position: relative; /* 相对定位 */
+}
+
+.left-bar li {
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.left-bar li:hover {
+    background: #eee;
+}
+
+/* 中间内容 */
+.main-content {
+    width: 700px;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    float: left;
+}
+
+/* 图书展示 父相子绝 */
+.book-list {
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.book-item {
+    width: 180px;
+    height: 220px;
+    border: 1px solid #ddd;
+    float: left;
+    margin: 0 10px;
+    /* 父元素相对 */
+    position: relative;
+}
+
+.book-item img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 遮罩层 绝对定位 + 悬浮显示隐藏 */
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    line-height: 220px;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; /* 默认隐藏 */
+    cursor: pointer;
+}
+
+.book-item:hover .mask {
+    display: block; /* 悬浮显示 */
+}
+
+/* 热门推荐 浮动布局 */
+.hot-book {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.hot-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.hot-item:hover {
+    background: #e8f4ff;
+}
+
+/* 新书 table */
+.new-book {
+    margin-top: 20px;
+}
+
+/* 右侧栏 固定定位 */
+.right-bar {
+    width: 250px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    /* 固定定位 */
+    position: fixed;
+    right: 20px;
+    top: 120px;
+}
+
+.right-bar p {
+    line-height: 30px;
+    cursor: pointer;
+}
