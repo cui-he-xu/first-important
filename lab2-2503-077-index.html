@@ -2,14 +2,16 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图书商城</title>
     <link rel="stylesheet" href=".vscode/lab2-2503-077-index.css">
 </head>
 <body>
     <!-- 头部区域 logo+导航 -->
     <header class="header">
-        <div class="logo">图书商城LOGO</div>
-        <!-- 顶部导航 固定+浮动 -->
+        <div class="logo">
+            <img src="../image/logo.webp" alt="图书商城LOGO">
+        </div>
         <nav class="top-nav">
             <ul>
                 <li><a href="#">首页</a></li>
@@ -22,7 +24,7 @@
 
     <!-- 主体三栏浮动 -->
     <div class="container">
-        <!-- 左侧栏 相对定位 -->
+        <!-- 左侧栏 -->
         <aside class="left-bar">
             <h3>图书分类</h3>
             <ul>
@@ -37,32 +39,40 @@
         <!-- 中间内容区 -->
         <main class="main-content">
             <h3>图书展示</h3>
-            <!-- 父相子绝 悬浮隐藏显示 -->
             <div class="book-list">
                 <div class="book-item">
-                    <img src="./img/book1.jpg" alt="图书">
+                    <img src="../image/book1.jpg" alt="图书">
                     <div class="mask">点击查看详情</div>
                 </div>
                 <div class="book-item">
-                    <img src="./img/book2.jpg" alt="图书">
+                    <img src="../image/book2.jpg" alt="图书">
+                    <div class="mask">点击查看详情</div>
                 </div>
                 <div class="book-item">
-                    <img src="./img/book3.jpg" alt="图书">
+                    <img src="../image/book3.jpg" alt="图书">
+                    <div class="mask">点击查看详情</div>
                 </div>
             </div>
 
-            <!-- 热门推荐 浮动排列 -->
             <div class="hot-book">
                 <h3>热门推荐</h3>
-                <div class="hot-item">热门图书1</div>
-                <div class="hot-item">热门图书2</div>
-                <div class="hot-item">热门图书3</div>
+                <div class="hot-item">
+                    <img src="../image/book3.jpg" alt="热门图书1">
+                    <span>热门图书1</span>
+                </div>
+                <div class="hot-item">
+                    <img src="../image/book4.webp" alt="热门图书2">
+                    <span>热门图书2</span>
+                </div>
+                <div class="hot-item">
+                    <img src="../image/book5.webp" alt="热门图书3">
+                    <span>热门图书3</span>
+                </div>
             </div>
 
-            <!-- 新书上市 table布局 -->
             <div class="new-book">
                 <h3>新书上市</h3>
-                <table border="1" cellpadding="8" cellspacing="0">
+                <table>
                     <tr>
                         <td>书名</td>
                         <td>作者</td>
@@ -82,11 +92,13 @@
             </div>
         </main>
 
-        <!-- 右侧栏 固定定位 广告 -->
+        <!-- 右侧栏 -->
         <aside class="right-bar">
             <h3>促销活动</h3>
+            <div class="ad-img">
+                <img src="../image/true.jpg" alt="促销活动">
+            </div>
             <p>全场图书8折</p>
-            <p>满99减20</p>
             <p>会员专属优惠</p>
         </aside>
     </div>
